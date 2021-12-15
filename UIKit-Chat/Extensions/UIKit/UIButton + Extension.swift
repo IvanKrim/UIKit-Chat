@@ -20,14 +20,14 @@ extension UIButton {
         cornerRadius: CGFloat = 10
     ) {
         self.init(type: .system)
-        
+
         self.setTitle(title, for: .normal)
         self.setTitleColor(titleColor, for: .normal)
         self.backgroundColor = backgroundColor
         self.titleLabel?.font = font
-        
+
         self.layer.cornerRadius = cornerRadius
-        
+
         // настройка теней для кнопки
         if isShadow {
             self.layer.shadowColor = UIColor.black.cgColor

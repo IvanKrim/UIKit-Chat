@@ -12,7 +12,7 @@ extension UIFont {
     static func arial20() -> UIFont? {
         return UIFont.init(name: "arial", size: 20)
     }
-    
+
     static func arial26() -> UIFont? {
         return UIFont.init(name: "arial", size: 26)
     }

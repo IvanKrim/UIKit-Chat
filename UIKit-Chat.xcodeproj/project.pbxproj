@@ -17,6 +17,8 @@
 		2033FBFA275A320D0091B0EB /* UIColor + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FBF9275A320D0091B0EB /* UIColor + Extension.swift */; };
 		2033FBFC275A35770091B0EB /* UILabel + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FBFB275A35770091B0EB /* UILabel + Extension.swift */; };
 		2033FBFE275A366F0091B0EB /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FBFD275A366F0091B0EB /* UIImageView + Extension.swift */; };
+		2033FC01275A41000091B0EB /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FC00275A41000091B0EB /* ButtonFormView.swift */; };
+		2033FC03275A46BF0091B0EB /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FC02275A46BF0091B0EB /* UIStackView + Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		2033FBF9275A320D0091B0EB /* UIColor + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor + Extension.swift"; sourceTree = "<group>"; };
 		2033FBFB275A35770091B0EB /* UILabel + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel + Extension.swift"; sourceTree = "<group>"; };
 		2033FBFD275A366F0091B0EB /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
+		2033FC00275A41000091B0EB /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
+		2033FC02275A46BF0091B0EB /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,11 +82,8 @@
 		2033FBF5275A2CA60091B0EB /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				2033FBF3275A2C9A0091B0EB /* UIButton + Extension.swift */,
-				2033FBFD275A366F0091B0EB /* UIImageView + Extension.swift */,
-				2033FBF6275A30500091B0EB /* UIFont + Extension.swift */,
-				2033FBF9275A320D0091B0EB /* UIColor + Extension.swift */,
-				2033FBFB275A35770091B0EB /* UILabel + Extension.swift */,
+				2033FC00275A41000091B0EB /* ButtonFormView.swift */,
+				2033FBFF275A3F0D0091B0EB /* UIKit */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -95,6 +96,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		2033FBFF275A3F0D0091B0EB /* UIKit */ = {
+			isa = PBXGroup;
+			children = (
+				2033FBF3275A2C9A0091B0EB /* UIButton + Extension.swift */,
+				2033FBFD275A366F0091B0EB /* UIImageView + Extension.swift */,
+				2033FBF6275A30500091B0EB /* UIFont + Extension.swift */,
+				2033FBF9275A320D0091B0EB /* UIColor + Extension.swift */,
+				2033FBFB275A35770091B0EB /* UILabel + Extension.swift */,
+				2033FC02275A46BF0091B0EB /* UIStackView + Extension.swift */,
+			);
+			path = UIKit;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -105,6 +119,7 @@
 				2033FBD8275A177A0091B0EB /* Sources */,
 				2033FBD9275A177A0091B0EB /* Frameworks */,
 				2033FBDA275A177A0091B0EB /* Resources */,
+				2033C846276A1B0D004A54C4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -160,6 +175,26 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2033C846276A1B0D004A54C4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2033FBD8275A177A0091B0EB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -168,11 +203,13 @@
 				2033FBF7275A30500091B0EB /* UIFont + Extension.swift in Sources */,
 				2033FBE4275A177A0091B0EB /* AuthViewController.swift in Sources */,
 				2033FBE0275A177A0091B0EB /* AppDelegate.swift in Sources */,
+				2033FC01275A41000091B0EB /* ButtonFormView.swift in Sources */,
 				2033FBFC275A35770091B0EB /* UILabel + Extension.swift in Sources */,
 				2033FBFE275A366F0091B0EB /* UIImageView + Extension.swift in Sources */,
 				2033FBFA275A320D0091B0EB /* UIColor + Extension.swift in Sources */,
 				2033FBE2275A177A0091B0EB /* SceneDelegate.swift in Sources */,
 				2033FBF4275A2C9A0091B0EB /* UIButton + Extension.swift in Sources */,
+				2033FC03275A46BF0091B0EB /* UIStackView + Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
