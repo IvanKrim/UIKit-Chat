@@ -16,7 +16,7 @@ extension UIButton {
         titleColor: UIColor,
         backgroundColor: UIColor,
         font: UIFont? = .arial20(),
-        isShadow: Bool,
+        isShadow: Bool? = true,
         cornerRadius: CGFloat = 10
     ) {
         self.init(type: .system)
@@ -29,7 +29,7 @@ extension UIButton {
         self.layer.cornerRadius = cornerRadius
 
         // настройка теней для кнопки
-        if isShadow {
+        if isShadow ?? false {
             self.layer.shadowColor = UIColor.black.cgColor
             self.layer.shadowRadius = 4
             self.layer.shadowOpacity = 0.2

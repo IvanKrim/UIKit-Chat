@@ -26,6 +26,7 @@ class AuthViewController: UIViewController {
     }
 }
 
+//  MARK: - SetupConstraints
 extension AuthViewController {
 
     private func setupConstraints() {
@@ -55,11 +56,11 @@ extension AuthViewController {
         view.addSubview(logoStackView)
         view.addSubview(stackView)
 
+        // настраиваем констрейнты для лого
         NSLayoutConstraint.activate([
             logoStackView.topAnchor.constraint(equalTo: view.topAnchor, constant: 100),
             logoStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 8),
             logoStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -8)
-
         ])
 
         // настраиваем констрейнты для стеквью
