@@ -23,7 +23,7 @@
 		20A0B9D0276A2F6100DFAA11 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A0B9CF276A2F6100DFAA11 /* OneLineTextField.swift */; };
 		20B8E941276B3C720004FD16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B8E940276B3C720004FD16 /* LoginViewController.swift */; };
 		20B8E943276BA9FA0004FD16 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B8E942276BA9FA0004FD16 /* SetupProfileViewController.swift */; };
-		20B8E945276BAE2B0004FD16 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B8E944276BAE2B0004FD16 /* AddPhotoView.swift */; };
+		20BDAC0C276CB7E300F4E0E7 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BDAC0B276CB7E300F4E0E7 /* AddPhotoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,7 +45,7 @@
 		20A0B9CF276A2F6100DFAA11 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		20B8E940276B3C720004FD16 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		20B8E942276BA9FA0004FD16 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
-		20B8E944276BAE2B0004FD16 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		20BDAC0B276CB7E300F4E0E7 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,6 @@
 			children = (
 				2033FC00275A41000091B0EB /* ButtonFormView.swift */,
 				20A0B9CF276A2F6100DFAA11 /* OneLineTextField.swift */,
-				20B8E944276BAE2B0004FD16 /* AddPhotoView.swift */,
 				2033FBFF275A3F0D0091B0EB /* UIKit */,
 			);
 			path = Extensions;
@@ -107,6 +106,7 @@
 				2033C847276A209C004A54C4 /* SignUpViewController.swift */,
 				20B8E940276B3C720004FD16 /* LoginViewController.swift */,
 				20B8E942276BA9FA0004FD16 /* SetupProfileViewController.swift */,
+				20BDAC0B276CB7E300F4E0E7 /* AddPhotoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -222,7 +222,7 @@
 				20B8E943276BA9FA0004FD16 /* SetupProfileViewController.swift in Sources */,
 				2033FBE0275A177A0091B0EB /* AppDelegate.swift in Sources */,
 				2033FC01275A41000091B0EB /* ButtonFormView.swift in Sources */,
-				20B8E945276BAE2B0004FD16 /* AddPhotoView.swift in Sources */,
+				20BDAC0C276CB7E300F4E0E7 /* AddPhotoView.swift in Sources */,
 				2033FBFC275A35770091B0EB /* UILabel + Extension.swift in Sources */,
 				2033FBFE275A366F0091B0EB /* UIImageView + Extension.swift in Sources */,
 				2033FBFA275A320D0091B0EB /* UIColor + Extension.swift in Sources */,
