@@ -94,6 +94,7 @@
 			children = (
 				2033FC00275A41000091B0EB /* ButtonFormView.swift */,
 				20A0B9CF276A2F6100DFAA11 /* OneLineTextField.swift */,
+				20BDAC0B276CB7E300F4E0E7 /* AddPhotoView.swift */,
 				2033FBFF275A3F0D0091B0EB /* UIKit */,
 			);
 			path = Extensions;
@@ -106,7 +107,6 @@
 				2033C847276A209C004A54C4 /* SignUpViewController.swift */,
 				20B8E940276B3C720004FD16 /* LoginViewController.swift */,
 				20B8E942276BA9FA0004FD16 /* SetupProfileViewController.swift */,
-				20BDAC0B276CB7E300F4E0E7 /* AddPhotoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

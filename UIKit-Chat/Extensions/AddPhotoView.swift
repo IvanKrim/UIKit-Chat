@@ -24,8 +24,12 @@ class AddPhotoView: UIView {
     let plusButtom: UIButton = {
         let button = UIButton(type: .system)
         button.translatesAutoresizingMaskIntoConstraints = false
-//        let myImage = UIImage(systemName: "plus.circle.fill")
-                let myImage = #imageLiteral(resourceName: "plus")
+        //        let myImage = UIImage(systemName: "plus.circle.fill")
+        
+        
+        let myImage = #imageLiteral(resourceName: "plus")
+        
+        
         button.setImage(myImage, for: .normal)
         button.tintColor = .buttonDark()
         return button
@@ -56,7 +60,6 @@ class AddPhotoView: UIView {
         
         self.bottomAnchor.constraint(equalTo: circleImageView.bottomAnchor).isActive = true
         self.trailingAnchor.constraint(equalTo: plusButtom.trailingAnchor).isActive = true
-        
     }
     
     required init?(coder: NSCoder) {

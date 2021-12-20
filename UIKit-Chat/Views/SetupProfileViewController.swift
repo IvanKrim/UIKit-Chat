@@ -11,12 +11,20 @@ class SetupProfileViewController: UIViewController {
     
     let fillImageVIew = AddPhotoView()
     
+    let fullNameLabel = UILabel(text: "Full Name")
+    let aboutMeLabel = UILabel(text: "About Me")
+    
+    let fullNameTextField = OneLineTextField(font: .arial20())
+    let aboutMeTextField = OneLineTextField(font: .arial20())
+    
+    let goToChatsButton = UIButton(
+        title: "Go to Chats!", titleColor: .white,
+        backgroundColor: .buttonDark(), cornerRadius: 10)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
         view.backgroundColor = .white
-        
         setupConstraints()
     }
 }
@@ -25,16 +33,44 @@ class SetupProfileViewController: UIViewController {
 extension SetupProfileViewController {
     private func setupConstraints() {
         
+        let fullNameStackView = UIStackView(
+            arrangedSubviews: [fullNameLabel, fullNameTextField],
+            axis: .vertical,
+            spacing: 0)
+        
+        let aboutMeStackView = UIStackView(
+            arrangedSubviews: [aboutMeLabel, aboutMeTextField],
+            axis: .vertical,
+            spacing: 0)
+        
+        let bottomStackView = UIStackView(
+            arrangedSubviews: [goToChatsButton],
+            axis: .vertical,
+            spacing: 0)
+        
+        let stackView = UIStackView(
+            arrangedSubviews: [fullNameStackView, aboutMeStackView, bottomStackView],
+            axis: .vertical,
+            spacing: 40)
+        
+        goToChatsButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
+        
         fillImageVIew.translatesAutoresizingMaskIntoConstraints = false
+        stackView.translatesAutoresizingMaskIntoConstraints = false
+        
         view.addSubview(fillImageVIew)
+        view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
             fillImageVIew.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
             fillImageVIew.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
-        
-        // виидео 9 19я минута
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: fillImageVIew.bottomAnchor, constant: 40),
+            stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+            stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40 )
+        ])
     }
 }
 
