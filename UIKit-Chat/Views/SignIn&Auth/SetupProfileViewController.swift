@@ -9,10 +9,9 @@ import UIKit
 
 class SetupProfileViewController: UIViewController {
     
-    let welcomeLabel = UILabel(text: "Setup Profile!", font: .arial26())
-    
     let fullImageVIew = AddPhotoView()
     
+    let welcomeLabel = UILabel(text: "Setup Profile!", font: .arial26())
     let fullNameLabel = UILabel(text: "Full Name")
     let aboutMeLabel = UILabel(text: "About Me")
     let sexLabel = UILabel(text: "Sex")

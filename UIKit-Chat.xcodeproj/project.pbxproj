@@ -20,6 +20,9 @@
 		2033FBFE275A366F0091B0EB /* UIImageView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FBFD275A366F0091B0EB /* UIImageView + Extension.swift */; };
 		2033FC01275A41000091B0EB /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FC00275A41000091B0EB /* ButtonFormView.swift */; };
 		2033FC03275A46BF0091B0EB /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FC02275A46BF0091B0EB /* UIStackView + Extension.swift */; };
+		20439A922772087600C47986 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20439A912772087600C47986 /* ListViewController.swift */; };
+		20439A952772089800C47986 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20439A942772089800C47986 /* MainTabBarController.swift */; };
+		20439A97277208E500C47986 /* PeopleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20439A96277208E500C47986 /* PeopleViewController.swift */; };
 		20A0B9D0276A2F6100DFAA11 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A0B9CF276A2F6100DFAA11 /* OneLineTextField.swift */; };
 		20AA02982771C889006788C6 /* SegmentedControl + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AA02972771C888006788C6 /* SegmentedControl + Extension.swift */; };
 		20B8E941276B3C720004FD16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B8E940276B3C720004FD16 /* LoginViewController.swift */; };
@@ -43,6 +46,9 @@
 		2033FBFD275A366F0091B0EB /* UIImageView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView + Extension.swift"; sourceTree = "<group>"; };
 		2033FC00275A41000091B0EB /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		2033FC02275A46BF0091B0EB /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
+		20439A912772087600C47986 /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		20439A942772089800C47986 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		20439A96277208E500C47986 /* PeopleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleViewController.swift; sourceTree = "<group>"; };
 		20A0B9CF276A2F6100DFAA11 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
 		20AA02972771C888006788C6 /* SegmentedControl + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl + Extension.swift"; sourceTree = "<group>"; };
 		20B8E940276B3C720004FD16 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -105,10 +111,8 @@
 		2033FBF8275A317F0091B0EB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2033FBE3275A177A0091B0EB /* AuthViewController.swift */,
-				2033C847276A209C004A54C4 /* SignUpViewController.swift */,
-				20B8E940276B3C720004FD16 /* LoginViewController.swift */,
-				20B8E942276BA9FA0004FD16 /* SetupProfileViewController.swift */,
+				20439A932772087C00C47986 /* Controllers */,
+				20439A902772085300C47986 /* SignIn&Auth */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -125,6 +129,27 @@
 				20AA02972771C888006788C6 /* SegmentedControl + Extension.swift */,
 			);
 			path = UIKit;
+			sourceTree = "<group>";
+		};
+		20439A902772085300C47986 /* SignIn&Auth */ = {
+			isa = PBXGroup;
+			children = (
+				2033FBE3275A177A0091B0EB /* AuthViewController.swift */,
+				2033C847276A209C004A54C4 /* SignUpViewController.swift */,
+				20B8E940276B3C720004FD16 /* LoginViewController.swift */,
+				20B8E942276BA9FA0004FD16 /* SetupProfileViewController.swift */,
+			);
+			path = "SignIn&Auth";
+			sourceTree = "<group>";
+		};
+		20439A932772087C00C47986 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				20439A942772089800C47986 /* MainTabBarController.swift */,
+				20439A912772087600C47986 /* ListViewController.swift */,
+				20439A96277208E500C47986 /* PeopleViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,9 +243,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20439A922772087600C47986 /* ListViewController.swift in Sources */,
 				20A0B9D0276A2F6100DFAA11 /* OneLineTextField.swift in Sources */,
+				20439A952772089800C47986 /* MainTabBarController.swift in Sources */,
 				2033C848276A209C004A54C4 /* SignUpViewController.swift in Sources */,
 				2033FBF7275A30500091B0EB /* UIFont + Extension.swift in Sources */,
+				20439A97277208E500C47986 /* PeopleViewController.swift in Sources */,
 				2033FBE4275A177A0091B0EB /* AuthViewController.swift in Sources */,
 				20B8E943276BA9FA0004FD16 /* SetupProfileViewController.swift in Sources */,
 				2033FBE0275A177A0091B0EB /* AppDelegate.swift in Sources */,
