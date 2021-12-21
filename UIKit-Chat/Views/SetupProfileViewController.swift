@@ -9,13 +9,17 @@ import UIKit
 
 class SetupProfileViewController: UIViewController {
     
-    let fillImageVIew = AddPhotoView()
+    let welcomeLabel = UILabel(text: "Setup Profile!", font: .arial26())
+    
+    let fullImageVIew = AddPhotoView()
     
     let fullNameLabel = UILabel(text: "Full Name")
     let aboutMeLabel = UILabel(text: "About Me")
+    let sexLabel = UILabel(text: "Sex")
     
     let fullNameTextField = OneLineTextField(font: .arial20())
     let aboutMeTextField = OneLineTextField(font: .arial20())
+    let sexSegmentedControl = UISegmentedControl(first: "Male", second: "Female")
     
     let goToChatsButton = UIButton(
         title: "Go to Chats!", titleColor: .white,
@@ -43,31 +47,41 @@ extension SetupProfileViewController {
             axis: .vertical,
             spacing: 0)
         
-        let bottomStackView = UIStackView(
-            arrangedSubviews: [goToChatsButton],
+        let sexStackView = UIStackView(
+            arrangedSubviews: [sexLabel, sexSegmentedControl],
             axis: .vertical,
-            spacing: 0)
+            spacing: 12
+        )
         
         let stackView = UIStackView(
-            arrangedSubviews: [fullNameStackView, aboutMeStackView, bottomStackView],
+            arrangedSubviews: [
+                fullNameStackView, aboutMeStackView,
+                sexStackView, goToChatsButton],
             axis: .vertical,
             spacing: 40)
         
         goToChatsButton.heightAnchor.constraint(equalToConstant: 60).isActive = true
         
-        fillImageVIew.translatesAutoresizingMaskIntoConstraints = false
+        welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
+        fullImageVIew.translatesAutoresizingMaskIntoConstraints = false
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
-        view.addSubview(fillImageVIew)
+        view.addSubview(welcomeLabel)
+        view.addSubview(fullImageVIew)
         view.addSubview(stackView)
         
         NSLayoutConstraint.activate([
-            fillImageVIew.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
-            fillImageVIew.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+            welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 160),
+            welcomeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            stackView.topAnchor.constraint(equalTo: fillImageVIew.bottomAnchor, constant: 40),
+            fullImageVIew.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 40),
+            fullImageVIew.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            stackView.topAnchor.constraint(equalTo: fullImageVIew.bottomAnchor, constant: 40),
             stackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
             stackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40 )
         ])

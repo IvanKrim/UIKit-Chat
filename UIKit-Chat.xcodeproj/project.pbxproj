@@ -21,6 +21,7 @@
 		2033FC01275A41000091B0EB /* ButtonFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FC00275A41000091B0EB /* ButtonFormView.swift */; };
 		2033FC03275A46BF0091B0EB /* UIStackView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2033FC02275A46BF0091B0EB /* UIStackView + Extension.swift */; };
 		20A0B9D0276A2F6100DFAA11 /* OneLineTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20A0B9CF276A2F6100DFAA11 /* OneLineTextField.swift */; };
+		20AA02982771C889006788C6 /* SegmentedControl + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20AA02972771C888006788C6 /* SegmentedControl + Extension.swift */; };
 		20B8E941276B3C720004FD16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B8E940276B3C720004FD16 /* LoginViewController.swift */; };
 		20B8E943276BA9FA0004FD16 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B8E942276BA9FA0004FD16 /* SetupProfileViewController.swift */; };
 		20BDAC0C276CB7E300F4E0E7 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BDAC0B276CB7E300F4E0E7 /* AddPhotoView.swift */; };
@@ -43,6 +44,7 @@
 		2033FC00275A41000091B0EB /* ButtonFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFormView.swift; sourceTree = "<group>"; };
 		2033FC02275A46BF0091B0EB /* UIStackView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView + Extension.swift"; sourceTree = "<group>"; };
 		20A0B9CF276A2F6100DFAA11 /* OneLineTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLineTextField.swift; sourceTree = "<group>"; };
+		20AA02972771C888006788C6 /* SegmentedControl + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SegmentedControl + Extension.swift"; sourceTree = "<group>"; };
 		20B8E940276B3C720004FD16 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		20B8E942276BA9FA0004FD16 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		20BDAC0B276CB7E300F4E0E7 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				2033FBF9275A320D0091B0EB /* UIColor + Extension.swift */,
 				2033FBFB275A35770091B0EB /* UILabel + Extension.swift */,
 				2033FC02275A46BF0091B0EB /* UIStackView + Extension.swift */,
+				20AA02972771C888006788C6 /* SegmentedControl + Extension.swift */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				20BDAC0C276CB7E300F4E0E7 /* AddPhotoView.swift in Sources */,
 				2033FBFC275A35770091B0EB /* UILabel + Extension.swift in Sources */,
 				2033FBFE275A366F0091B0EB /* UIImageView + Extension.swift in Sources */,
+				20AA02982771C889006788C6 /* SegmentedControl + Extension.swift in Sources */,
 				2033FBFA275A320D0091B0EB /* UIColor + Extension.swift in Sources */,
 				2033FBE2275A177A0091B0EB /* SceneDelegate.swift in Sources */,
 				2033FBF4275A2C9A0091B0EB /* UIButton + Extension.swift in Sources */,
