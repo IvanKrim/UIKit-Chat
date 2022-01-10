@@ -43,7 +43,7 @@ extension WaitingChatCell {
             friendImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor)
         ])
     }
-}
+} 
 
 // MARK: - SwiftUI
 import SwiftUI

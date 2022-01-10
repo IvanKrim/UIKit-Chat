@@ -81,7 +81,6 @@ extension ActiveChatCell {
     }
 }
 
-
 // MARK: - SwiftUI
 import SwiftUI
 
