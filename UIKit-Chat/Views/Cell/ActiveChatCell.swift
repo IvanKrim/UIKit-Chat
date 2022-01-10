@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol SelfConfiguringCell {
-    static var reuseID: String { get }
-    func configure(with value: MChat)
-}
 
 class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     static var reuseID: String = "ActiveChatCell"
@@ -86,6 +82,7 @@ extension ActiveChatCell {
 }
 
 
+// MARK: - SwiftUI
 import SwiftUI
 
 struct ActiveChatProvider: PreviewProvider {
