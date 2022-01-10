@@ -35,7 +35,7 @@ class ListViewController: UIViewController {
         
     }
     
-    var dataSourse: UICollectionViewDiffableDataSource<Section, MChat>? // объект типа секции, объект параметров секции
+    var dataSourse: UICollectionViewDiffableDataSource<Section, MChat>? // <объект типа секции, объект параметров секции>
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -84,9 +84,9 @@ extension ListViewController {
     
     private func configure<T: SelfConfiguringCell>(cellType: T.Type, with value: MChat, for indexPath: IndexPath) -> T {
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellType.reuseID, for: indexPath) as? T else { fatalError("Enable to dequeue \(cellType)")}
+        
         cell.configure(with: value)
         return cell
-        
     }
     
     private func createDataSource() {

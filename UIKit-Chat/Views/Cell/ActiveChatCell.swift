@@ -29,7 +29,7 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
         self.clipsToBounds = true
     }
     
-    func configure(with value: MChat) {
+    func configure(with value: MChat) { // наполняем ячейку данными
         friendImageView.image = UIImage(named: value.userImageString)
         friendName.text = value.username
         lastMessage.text = value.lastMessage
@@ -42,6 +42,7 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
 
 // MARK: - SetupConstraints
 extension ActiveChatCell {
+    
     private func setupConstraints() {
         friendImageView.translatesAutoresizingMaskIntoConstraints = false
         gradientView.translatesAutoresizingMaskIntoConstraints = false
