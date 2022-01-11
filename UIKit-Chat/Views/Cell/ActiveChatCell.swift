@@ -7,7 +7,6 @@
 
 import UIKit
 
-
 class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
     static var reuseID: String = "ActiveChatCell"
     
