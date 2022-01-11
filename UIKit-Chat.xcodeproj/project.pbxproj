@@ -32,6 +32,7 @@
 		20B8E941276B3C720004FD16 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B8E940276B3C720004FD16 /* LoginViewController.swift */; };
 		20B8E943276BA9FA0004FD16 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B8E942276BA9FA0004FD16 /* SetupProfileViewController.swift */; };
 		20BDAC0C276CB7E300F4E0E7 /* AddPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20BDAC0B276CB7E300F4E0E7 /* AddPhotoView.swift */; };
+		20C16854278DD6D60059CCF3 /* SectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C16853278DD6D60059CCF3 /* SectionHeader.swift */; };
 		20D1E4D5278C679A00A217BD /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1E4D4278C679A00A217BD /* GradientView.swift */; };
 		20D1E4D7278C710000A217BD /* WaitingChatCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1E4D6278C70FF00A217BD /* WaitingChatCell.swift */; };
 		20D1E4D9278C731500A217BD /* SelfConfiguratingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20D1E4D8278C731500A217BD /* SelfConfiguratingCell.swift */; };
@@ -65,6 +66,7 @@
 		20B8E940276B3C720004FD16 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		20B8E942276BA9FA0004FD16 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		20BDAC0B276CB7E300F4E0E7 /* AddPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPhotoView.swift; sourceTree = "<group>"; };
+		20C16853278DD6D60059CCF3 /* SectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionHeader.swift; sourceTree = "<group>"; };
 		20D1E4D4278C679A00A217BD /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		20D1E4D6278C70FF00A217BD /* WaitingChatCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitingChatCell.swift; sourceTree = "<group>"; };
 		20D1E4D8278C731500A217BD /* SelfConfiguratingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelfConfiguratingCell.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				20BDAC0B276CB7E300F4E0E7 /* AddPhotoView.swift */,
 				2005F4962775E51600CD74E6 /* Extension + Bundle.swift */,
 				20D1E4D4278C679A00A217BD /* GradientView.swift */,
+				20C16853278DD6D60059CCF3 /* SectionHeader.swift */,
 				2033FBFF275A3F0D0091B0EB /* UIKit */,
 			);
 			path = Extensions;
@@ -284,6 +287,7 @@
 			files = (
 				20D1E4D9278C731500A217BD /* SelfConfiguratingCell.swift in Sources */,
 				20439A922772087600C47986 /* ListViewController.swift in Sources */,
+				20C16854278DD6D60059CCF3 /* SectionHeader.swift in Sources */,
 				20A0B9D0276A2F6100DFAA11 /* OneLineTextField.swift in Sources */,
 				20D1E4D5278C679A00A217BD /* GradientView.swift in Sources */,
 				20439A952772089800C47986 /* MainTabBarController.swift in Sources */,
