@@ -33,6 +33,15 @@ class ListViewController: UIViewController {
         case waitingChats
         case activeChats
         
+        func description() -> String {
+            switch self {
+            case .waitingChats:
+                return "Waiting chats"
+            case .activeChats:
+                return "Active chats"
+            }
+        }
+        
     }
     
     var dataSourse: UICollectionViewDiffableDataSource<Section, MChat>? // <объект типа секции, объект параметров секции>
@@ -64,6 +73,8 @@ class ListViewController: UIViewController {
         
         collectionView.register(ActiveChatCell.self, forCellWithReuseIdentifier: ActiveChatCell.reuseID)
         collectionView.register(WaitingChatCell.self, forCellWithReuseIdentifier: WaitingChatCell.reuseID)
+        collectionView.register(SectionHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: SectionHeader.reuseID)
+        
     }
     
     private func reloadData() { // добавляем реальные данные
@@ -103,6 +114,18 @@ extension ListViewController {
                     return self.configure(cellType: WaitingChatCell.self, with: chat, for: indexPath)
                 }
             })
+        
+        dataSourse?.supplementaryViewProvider = {
+            collectionView, kind, indexPath in
+            guard let sectionHeader = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: SectionHeader.reuseID, for: indexPath) as? SectionHeader else { fatalError("Can not create new section header")}
+            guard let section = Section(rawValue: indexPath.section) else { fatalError("Unknown section kind")}
+            sectionHeader.configure(
+                text: section.description(),
+                font: .lao20(),
+                textColor: .textGrayLight())
+            
+            return sectionHeader
+        }
     }
 }
 
@@ -123,11 +146,14 @@ extension ListViewController {
                 return self.createWaitingChats()
             }
         }
+        let config = UICollectionViewCompositionalLayoutConfiguration()
+        config.interSectionSpacing = 20
+        layout.configuration = config
+        
         return layout
     }
     
     private func createWaitingChats() -> NSCollectionLayoutSection {
-        
         let itemSize = NSCollectionLayoutSize(
             widthDimension: .fractionalWidth(1),
             heightDimension: .fractionalHeight(1)
@@ -143,11 +169,13 @@ extension ListViewController {
             subitems: [item]
         )
         
-        
         let section = NSCollectionLayoutSection(group: group)
         section.interGroupSpacing = 20
         section.contentInsets = NSDirectionalEdgeInsets.init(top: 16, leading: 20, bottom: 0, trailing: 20)
         section.orthogonalScrollingBehavior = .continuous
+        
+        let sectionHeader = createSectionHeader()
+        section.boundarySupplementaryItems = [sectionHeader]
         
         return section
     }
@@ -173,11 +201,23 @@ extension ListViewController {
         let section = NSCollectionLayoutSection(group: group)
         // конфигурация размеров(отступов) всей секции
         section.interGroupSpacing = 8
-        section.contentInsets = NSDirectionalEdgeInsets.init(
-            top: 16, leading: 20, bottom: 0, trailing: 20
-        )
+        section.contentInsets = NSDirectionalEdgeInsets.init(top: 16, leading: 20, bottom: 0, trailing: 20)
+        
+        let sectionHeader = createSectionHeader()
+        section.boundarySupplementaryItems = [sectionHeader]
         
         return section
+    }
+    
+    private func createSectionHeader() -> NSCollectionLayoutBoundarySupplementaryItem {
+        let sectionHeaderSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1), heightDimension: .estimated(1))
+        
+        let sectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+            layoutSize: sectionHeaderSize,
+            elementKind: UICollectionView.elementKindSectionHeader,
+            alignment: .top)
+        
+        return sectionHeader
     }
 }
 
@@ -188,7 +228,6 @@ extension ListViewController: UISearchBarDelegate {
         print(searchText)
     }
 }
-
 
 // MARK: - SwiftUI
 import SwiftUI
