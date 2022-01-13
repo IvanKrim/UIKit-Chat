@@ -17,11 +17,10 @@ class ActiveChatCell: UICollectionViewCell, SelfConfiguringCell {
 
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        setupConstraints()
-        
         self.layer.cornerRadius = 4
         self.clipsToBounds = true
+        
+        setupConstraints()
     }
     
     func configure(with value: MChat) { // наполняем ячейку данными
